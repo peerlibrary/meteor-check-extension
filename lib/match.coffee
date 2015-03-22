@@ -42,6 +42,10 @@ Match.EMail = Match.Where (x) ->
 
 # We provide our own optional that also allows null.
 Match.OptionalOrNull = (pattern) ->
-  Match.Where (x) ->
-    check x, Match.OneOf null, Match.Optional pattern
-    true
+  # We implement it inside Match.Optional so that Match.OptionalOrNull keeps the special semantics
+  # inside objects where it means that object field can not exist (instanceof is used to check for
+  # this). Thus Match.OptionalOrNull inside objects allows that field does not exist, that it exists
+  # but it is null, or that it is the pattern. We additionally allow for undefined because in simulation
+  # on the client a value can be undefined, but when serialized and send to the server it gets transformed
+  # into the null. So we want the same check to work both on the client and server.
+  Match.Optional Match.OneOf pattern, null, undefined
