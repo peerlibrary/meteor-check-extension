@@ -15,6 +15,10 @@ Package.onUse(function (api) {
     'underscore'
   ]);
 
+  api.imply([
+    'check'
+  ]);
+
   // Client and server.
   api.addFiles([
     'lib/match.coffee'
