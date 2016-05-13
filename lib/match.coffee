@@ -37,7 +37,7 @@ Match.SHA256String = Match.Where (x) ->
   not INVALID_SHA256_CHARS_REGEX.test x
 
 Match.EMail = Match.Where (x) ->
-  check x, NonEmptyString
+  check x, Match.NonEmptyString
   EMAIL_REGEX.test x
 
 # We provide our own optional that also allows null.
