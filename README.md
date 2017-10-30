@@ -23,4 +23,4 @@ The following additional checks are provided:
   * `Match.SHA256String` matches hex-encoded SHA-256 digests.
   * `Match.EMail` matches only non-empty e-mail strings.
   * `Match.OptionalOrNull(pattern)` matches an optional `pattern` or an explicit `null` value.
-
+  * `Match.RegexString(regex)` matches strings matching `regex` regular expression.

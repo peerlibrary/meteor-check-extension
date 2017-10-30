@@ -49,3 +49,7 @@ Match.OptionalOrNull = (pattern) ->
   # on the client a value can be undefined, but when serialized and send to the server it gets transformed
   # into the null. So we want the same check to work both on the client and server.
   Match.Optional Match.OneOf pattern, null, undefined
+
+Match.RegexString = (regex) ->
+  Match.Where (x) ->
+    regex.test x
