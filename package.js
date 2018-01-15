@@ -1,17 +1,18 @@
 Package.describe({
   name: 'peerlibrary:check-extension',
   summary: "Extensions to the built-in check package",
-  version: '0.3.0',
+  version: '0.4.0',
   git: 'https://github.com/peerlibrary/meteor-check-extension.git'
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('1.0.3.1');
+  api.versionsFrom('METEOR@1.4.4.5');
 
   // Core dependencies.
   api.use([
+    'coffeescript@2.0.3_3',
+    'ecmascript',
     'check',
-    'coffeescript',
     'underscore'
   ]);
 
@@ -19,9 +20,5 @@ Package.onUse(function (api) {
     'check'
   ]);
 
-  // Client and server.
-  api.addFiles([
-    'lib/match.coffee'
-  ]);
+  api.mainModule('lib.coffee');
 });
-

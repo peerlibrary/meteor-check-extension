@@ -1,3 +1,5 @@
+import {check, Match} from 'meteor/check'
+
 # From Meteor's random/random.js.
 UNMISTAKABLE_CHARS = '23456789ABCDEFGHJKLMNPQRSTWXYZabcdefghijkmnopqrstuvwxyz'
 INVALID_ID_CHARS_REGEX = new RegExp "[^#{ UNMISTAKABLE_CHARS }]"
@@ -53,3 +55,5 @@ Match.OptionalOrNull = (pattern) ->
 Match.RegexString = (regex) ->
   Match.Where (x) ->
     regex.test x
+
+export {check, Match}
