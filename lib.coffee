@@ -12,6 +12,10 @@ Match.PositiveNumber = Match.Where (x) ->
   check x, Number
   x > 0
 
+Match.NonNegativeInteger = Match.Where (x) ->
+  check x, Match.Integer
+  x >= 0
+
 Match.NonEmptyString = Match.Where (x) ->
   check x, String
   x.trim().length > 0

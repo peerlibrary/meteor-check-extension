@@ -16,6 +16,7 @@ Checks
 The following additional checks are provided:
 
   * `Match.PositiveNumber` matches only positive numbers.
+  * `Match.NonNegativeInteger` matches only non-negative integers.
   * `Match.NonEmptyString` matches only strings with a length greater than zero.
   * `Match.DocumentId` matches only valid ObjectIds.
   * `Match.ObjectWithOnlyStrings` matches only objects containing strings as keys and values.
