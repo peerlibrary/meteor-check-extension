@@ -56,6 +56,9 @@ Match.OptionalOrNull = (pattern) ->
   # into the null. So we want the same check to work both on the client and server.
   Match.Optional Match.OneOf pattern, null, undefined
 
+Match.OrNull = (pattern) ->
+  Match.OneOf pattern, null
+
 Match.RegexString = (regex) ->
   Match.Where (x) ->
     regex.test x

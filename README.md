@@ -23,5 +23,6 @@ The following additional checks are provided:
   * `Match.Enumeration(pattern, enumeration)` matches values matching `pattern` belonging to a certain `enumeration` object or array.
   * `Match.SHA256String` matches hex-encoded SHA-256 digests.
   * `Match.EMail` matches only non-empty e-mail strings.
-  * `Match.OptionalOrNull(pattern)` matches an optional `pattern` or an explicit `null` value.
+  * `Match.OptionalOrNull(pattern)` matches an optional `pattern`, a `null`, or an `undefined` value. In objects, field can also be missing.
+  * `Match.OrNull` matches the `pattern` or an explicit `null`.
   * `Match.RegexString(regex)` matches strings matching `regex` regular expression.
