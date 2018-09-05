@@ -16,7 +16,7 @@ meteor@1.9.0
 modern-browsers@0.1.2
 modules@0.12.2
 modules-runtime@0.10.0
-peerlibrary:check-extension@0.5.0
+peerlibrary:check-extension@0.6.0
 promise@0.11.1
 random@1.1.0
 underscore@1.0.10

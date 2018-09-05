@@ -1,7 +1,7 @@
 Package.describe({
   name: 'peerlibrary:check-extension',
   summary: "Extensions to the built-in check package",
-  version: '0.5.0',
+  version: '0.6.0',
   git: 'https://github.com/peerlibrary/meteor-check-extension.git'
 });
 
